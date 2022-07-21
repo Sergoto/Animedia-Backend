@@ -1,5 +1,4 @@
-const { default: mongoose } = require("mongoose")
-const Mongoose = require("mongoose")
+const mongoose = require("mongoose")
 
 const AnimeSchema = new mongoose.Schema({
   title: { type: String, required: true, unique: true },
