@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const Anime = require("../models/Anime");
+const Anime = require("../models/Anime")
 const verify = require("../verifyToken");
 
+
+//CREATE
 router.post("/", verify, async (req, res) => {
   if (req.user.isAdmin) {
     const newAnime = new Anime(req.body);

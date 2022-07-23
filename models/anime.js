@@ -6,7 +6,6 @@ const AnimeSchema = new mongoose.Schema({
   img: { type: String },
   imgTitle: { type: String },
   imgSmall: { type: String },
-  limit: {type: Number},
   year: { type: String },
   genre: { type: String },
   isSeries: {type: Boolean, default: false}

@@ -11,14 +11,17 @@ const listRoute = require("./routes/animeLists")
 
 app.use(express.json());
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.send(`Animedia is running on ${port}`);
 });
 
+app.get("/favicon.ico", (req, res) => {
+  res.send("favicon found");
+});
 
 app.use("/auth", authRoute)
 app.use("/users", userRoute)
 app.use("/anime", animeRoute)
-app.use("/list", listRoute)
+app.use("/lists", listRoute)
 
 
 const port = process.env.port || 4023;
